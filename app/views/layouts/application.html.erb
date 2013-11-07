@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Magic</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div id="wrap">
+    <%= content_for?(:menu) ? yield(:menu) : render(partial: 'menus/main_menu') %>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </div>
+  
+  <div id="footer">
+    <div class="navbar navbar-fixed-bottom">
+      <div class="container">
+	<ul class="nav navbar-nav">
+	  <% [:home, :privacy, :terms_of_use, :contact_us, :about_us].each do |i| %>
+            <li><a href="#"><%= link_to(i.to_s.titlecase) %></a></li>
+	  <% end %>
+	</ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
