@@ -12,23 +12,21 @@
   <![endif]-->
 </head>
 <body>
-  <div id="wrap">
-    <%= content_for?(:menu) ? yield(:menu) : render(partial: 'menus/main_menu') %>
-    <div class="container">
-      <%= yield %>
-    </div>
+  <%= content_for?(:menu) ? yield(:menu) : render(partial: 'menus/main_menu') %>
+  <div class="container">
+    <%= yield %>
   </div>
   
-  <div id="footer">
-    <div class="navbar navbar-fixed-bottom">
-      <div class="container">
-	<ul class="nav navbar-nav">
-	  <% [:home, :privacy, :terms_of_use, :contact_us, :about_us].each do |i| %>
-            <li><a href="#"><%= link_to(i.to_s.titlecase) %></a></li>
-	  <% end %>
-	</ul>
-      </div>
-    </div>
-  </div>
+  <!-- <div id="footer"> -->
+  <!--   <\!-- <div class="navbar"> -\-> -->
+  <!--     <div class="container"> -->
+  <!-- 	<ul class="nav navbar-nav"> -->
+  <!-- 	  <% [:home, :privacy, :terms_of_use, :contact_us, :about_us].each do |i| %> -->
+  <!--           <li><a href="#"><%= link_to(i.to_s.titlecase) %></a></li> -->
+  <!-- 	  <% end %> -->
+  <!-- 	</ul> -->
+  <!--     </div> -->
+  <!--   <\!-- </div> -\-> -->
+  <!-- </div> -->
 </body>
 </html>
