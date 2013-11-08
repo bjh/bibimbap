@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+if Template.count == 0
+  ('A'..'F').each do |n|
+    Template.create(name: "Bronze#{n}", label: "Bronze #{n} Brochure Template", page_count: 2)
+  end
+end
+
+if User.count == 0
+  User.create(first_name: 'brodie', last_name: 'hanbuch', email: 'brodie.hanbuch@gmail.com')
+end
