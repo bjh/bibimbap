@@ -9,6 +9,14 @@ Magic::Application.routes.draw do
 
   # Example of regular route:
   get 'home/logged_in' => 'home#logged_in'
+  get 'home/sign_up' => 'home#sign_up'
+  get 'home/catalogue' => 'home#catalogue'
+  get 'home/how' => 'home#how'
+  get 'home/design' => 'home#design'
+  get 'home/about' => 'home#about'
+  get 'home/contact' => 'home#contact'
+  # get 'home/' => 'home#'
+  # get 'home/' => 'home#'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

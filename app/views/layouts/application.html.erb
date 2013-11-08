@@ -12,21 +12,29 @@
   <![endif]-->
 </head>
 <body>
-  <%= content_for?(:menu) ? yield(:menu) : render(partial: 'menus/main_menu') %>
-  <div class="container">
-    <%= yield %>
-  </div>
-  
-  <!-- <div id="footer"> -->
-  <!--   <\!-- <div class="navbar"> -\-> -->
-  <!--     <div class="container"> -->
-  <!-- 	<ul class="nav navbar-nav"> -->
-  <!-- 	  <% [:home, :privacy, :terms_of_use, :contact_us, :about_us].each do |i| %> -->
-  <!--           <li><a href="#"><%= link_to(i.to_s.titlecase) %></a></li> -->
-  <!-- 	  <% end %> -->
-  <!-- 	</ul> -->
-  <!--     </div> -->
-  <!--   <\!-- </div> -\-> -->
+  <!-- <div class="wrap"> -->
+  <!--   <%#= content_for?(:menu) ? yield(:menu) : render(partial: 'menus/main_menu') %> -->
+  <!--   <div class="container"> -->
+  <!--     <%#= yield %> -->
+  <!--   </div> -->
   <!-- </div> -->
+
+  <!-- Wrap all page content here -->
+    <div id="wrap">
+      <!-- Fixed navbar -->
+      <%= content_for?(:menu) ? yield(:menu) : render(partial: 'menus/main_menu') %>
+
+      <!-- Begin page content -->
+      <div class="container">
+	<%= yield %>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+      </div>
+    </div>
+
 </body>
 </html>

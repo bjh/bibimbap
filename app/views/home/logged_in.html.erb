@@ -3,14 +3,14 @@
 <% end %>
 
 <div class="row">
-  <div class="col-md-12">
-    <h2>DESIGN WIZARD <small>BASIC INFO</small></h2>
+  <div class="col-md-5">
+    <!-- <div class="page-header"> -->
+      <h2>DESIGN WIZARD <small>BASIC INFO</small></h2>
+    <!-- </div> -->
   </div>
-</div>
 
-<div class="row">
-  <div class="control-group">&nbsp;</div>
-  <div class="col-md-12 col-md-offset-3">
+  <div class="col-md-5 col-md-offset-2">
+    <div class="control-group">&nbsp;</div>
     <div class="btn-group btn-group-lg">
       <button type="button" class="btn btn-default">STEP 1</button>
       <button type="button" class="btn btn-default active">STEP 2</button>
@@ -19,37 +19,64 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="control-group">&nbsp;</div>
-  <div class="col-md-8 col-md-offset-1">
-    <!-- <h4>Instructions <href="#" class="glyphicon glyphicon-home"> hide</a></h4> -->
-    <h4><a id="instructions-toggle" data-toggle="collapse" data-target="#instructions"><i class="glyphicon glyphicon-plus"></i></a> Instructions</h4>
-    <div id="instructions">
-      <p><strong>To edit images:</strong> Simply drag and drop high resolution images into the designated image areas. Once you've uploaded your images, click them to open a crop window and adjust the crop settings on the image.</p>
-      <p><strong>To edit the text:</strong> Simply click the designated text area and make your changes in the text editor window. To save your text changes ensure you click the check mark. (<em class="text-info">note:</em> clicking outside the text window will cause the window to close and for you to lose your changes)</p>
-      <p><strong>Tip:</strong> Remember to edit both page 1 and page 2 of the brochure before continuing to Step 3. All edits to the brochure will be saved automatically.</p>
-      </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12 col-md-offset-4">
-    <ul class="pagination">
-      <li class="active"><a href="#">page 1</a></li>
-      <li><a href="#">page 2</a></li>
-    </ul>
-  </div>
-</div>
+<!-- <div class="row"> -->
+<!--   <\!-- <div class="control-group">&nbsp;</div> -\-> -->
+<!--   <div class="col-md-8 col-md-offset-1"> -->
+<!--     <\!-- <div class="page-header"> -\-> -->
+<!--       <h4><a id="instructions-toggle" data-toggle="collapse" data-target="#instructions"><i class="glyphicon glyphicon-plus"></i></a> Instructions</h4> -->
+<!--     <\!-- </div> -\-> -->
+<!--     <\!-- <h4>Instructions <small><a id="instructions-toggle" data-toggle="collapse" data-target="#instructions">click to toggle</i></a></small></h4> -\-> -->
+<!--     <div id="instructions"> -->
+<!--       <p><strong>To edit images:</strong> Simply drag and drop high resolution images into the designated image areas. Once you've uploaded your images, click them to open a crop window and adjust the crop settings on the image.</p> -->
+<!--       <p><strong>To edit the text:</strong> Simply click the designated text area and make your changes in the text editor window. To save your text changes ensure you click the check mark.</p> -->
+<!--       <p><span class="label label-warning">note:</span> <em>clicking outside the text window will cause the window to close and for you to lose your changes.</em></p> -->
+<!--       <p><strong>Tip:</strong> Remember to edit both page 1 and page 2 of the brochure before continuing to Step 3. All edits to the brochure will be saved automatically.</p> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </div> -->
 
 <div class="row">
   <div class="col-md-12">
+    <div class="pull-left">
+      <ul class="pagination">
+	<li class="active"><a href="#">page 1</a></li>
+	<li><a href="#">page 2</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-10">
     <%= image_tag asset_path('wizard.png') %>
+  </div>
+
+  <div class="col-md-2">
+    <button class="btn btn-default btn-info btn-lg" data-toggle="modal" data-target="#myModal">Help</button>
   </div>
 </div>
 
 
-<script>
-  $('#instructions-toggle').click(function(e) {
-    
-  });
-</script>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">How To Edit Your Project</h4>
+      </div>
+      <div class="modal-body">
+        <div id="instructions">
+	  <p><strong>To edit images:</strong> Simply drag and drop high resolution images into the designated image areas. Once you've uploaded your images, click them to open a crop window and adjust the crop settings on the image.</p>
+	  <p><strong>To edit the text:</strong> Simply click the designated text area and make your changes in the text editor window. To save your text changes ensure you click the check mark.</p>
+	  <p><span class="label label-warning">note:</span> <em>clicking outside the text window will cause the window to close and for you to lose your changes.</em></p>
+	  <p><strong>Tip:</strong> Remember to edit both page 1 and page 2 of the brochure before continuing to Step 3. All edits to the brochure will be saved automatically.</p>
+	</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

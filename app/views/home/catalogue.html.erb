@@ -1,0 +1,28 @@
+<% content_for :menu do %>
+  <%= render partial: 'menus/logged_in' %>
+<% end %>
+
+<div class="row">
+  <div class="col-md-12">
+    <!-- <div class="page-header"> -->
+      <h2>CATALOGUE <small>browse our templates</small></h2>
+    <!-- </div> -->
+  </div>
+</div>
+
+
+<div class="control-group">&nbsp;</div>
+
+<div class="row">
+    <% (1...20).each do |n| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+    	<img src="http://placehold.it/200x200" alt="..." />
+    	<div class="caption text-center">
+          <h3>Bronze <%= n %></h3>
+          <p><a href="#" class="btn btn-default" role="button">Modify</a></p>
+    	</div>
+      </div>
+    </div>
+    <% end %>
+</div>
