@@ -14,13 +14,26 @@
 <div class="control-group">&nbsp;</div>
 
 <div class="row">
+  <div class="col-md-5 col-md-offset-4">
+    <div class="btn-group btn-group-lg" data-toggle="buttons"> 
+      <button type="button" class="btn btn-default active">All</button>
+      <button type="button" class="btn btn-default">Bronze</button>
+      <button type="button" class="btn btn-default">Silver</button>
+      <button type="button" class="btn btn-default">Gold</button>
+    </div>
+  </div>
+</div>
+
+<div class="control-group">&nbsp;</div>
+
+<div class="row">
     <% (1...20).each do |n| %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
     	<img src="http://placehold.it/200x200" alt="..." />
     	<div class="caption text-center">
           <h3>Bronze <%= n %></h3>
-          <p><a href="#" class="btn btn-default" role="button">Modify</a></p>
+          <p><a href="#" class="btn btn-link" role="button">Modify</a></p>
     	</div>
       </div>
     </div>

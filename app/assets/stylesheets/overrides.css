@@ -56,3 +56,9 @@ body {
 code {
   font-size: 80%;
 }
+
+/* STOP the gray visited link color showing up on button colors */
+a.btn:visited { color: #333; }
+a.btn-danger:visited { color: #fff; }
+a.btn-primary:visited { color: #fff; }
+/* a:visited { color: #551A8B; } */
