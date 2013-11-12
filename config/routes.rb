@@ -17,6 +17,10 @@ Magic::Application.routes.draw do
   get 'home/design' => 'home#design'
   get 'home/about' => 'home#about'
   get 'home/contact' => 'home#contact'
+  get 'home/dashboard' => 'home#dashboard'
+  get 'home/play' => 'home#play'
+  # get 'home/' => 'home#'
+  # get 'home/' => 'home#'
   # get 'home/' => 'home#'
   # get 'home/' => 'home#'
 

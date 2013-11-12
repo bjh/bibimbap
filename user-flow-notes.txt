@@ -1,0 +1,9 @@
+sign up:
+
+- only need devise fields (email, password, password_confirmation)
+
+
+
+new user flow:
+sign-up
+browse-catalogue

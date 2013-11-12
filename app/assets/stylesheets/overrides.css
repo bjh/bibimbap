@@ -1,23 +1,6 @@
-/* body { */
-/*   /\* min-height: 2000px; *\/ */
-/*   padding-top: 70px; */
-/* } */
-
-/* #footer { */
-/*   margin-top: 8em; */
-/*   border-top: 1px dotted #ccc; */
-/*   padding-top: 10px; */
-/*   height: 20px; */
-/*   background-color: white; */
-/* } */
-
-/* Sticky footer styles
--------------------------------------------------- */
-
 html,
 body {
   height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
 }
 
 /* Wrapper for page content to push down footer */
@@ -39,7 +22,6 @@ body {
 
 /* Custom page CSS
 -------------------------------------------------- */
-/* Not required for template or sticky footer method. */
 
 #wrap > .container {
   padding: 60px 15px 0;
@@ -61,4 +43,20 @@ code {
 a.btn:visited { color: #333; }
 a.btn-danger:visited { color: #fff; }
 a.btn-primary:visited { color: #fff; }
-/* a:visited { color: #551A8B; } */
+
+/* #content a {  */
+/*     color: #428bca;  */
+/*     background-color: transparent; */
+/*     text-decoration: none; */
+/*     border-bottom: 1px dashed #ddd; */
+/* } */
+
+/* #content a:visited { color: #428bca; } */
+
+.badge-important { background-color:#428bca; }
+.badge-warning { background-color:#f0ad4e; }
+
+.shazam {
+    padding-top: 2em;
+    /* margin-top: 4em; */
+}

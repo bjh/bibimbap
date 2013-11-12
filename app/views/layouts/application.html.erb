@@ -14,7 +14,7 @@
 <body>
   <div id="wrap">
     <%= content_for?(:menu) ? yield(:menu) : render(partial: 'menus/main_menu') %>
-    <div class="container">
+    <div id="content" class="container">
       <%= yield %>
     </div>
   </div>

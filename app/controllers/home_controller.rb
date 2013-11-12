@@ -19,4 +19,10 @@ class HomeController < ApplicationController
 
   def about
   end
+
+  def dashboard
+  end
+
+  def play
+  end
 end
